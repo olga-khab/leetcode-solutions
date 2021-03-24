@@ -42,3 +42,11 @@ class Solution:
                     dfs(grid, i, j)
         
     return count
+    
+    # reverse string O(1) extra space
+    def reverseString(self, s: List[str]) -> None:
+        """
+            Do not return anything, modify s in-place instead.
+            """
+        for i in range (0, len(s)//2):
+            s[i] , s[size-1-i] = s[size-1-i], s[i]
