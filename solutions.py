@@ -1,3 +1,8 @@
+class ListNode:
+     def __init__(self, val=0, next=None):
+         self.val = val
+
+         self.next = next
 class Solution:
     def twoSum(self, nums, target):
         dict = {}
@@ -50,3 +55,12 @@ class Solution:
             """
         for i in range (0, len(s)//2):
             s[i] , s[size-1-i] = s[size-1-i], s[i]
+    
+    # reverse Linked List
+    def reverseList(self, head: ListNode) -> ListNode:
+        rev = None
+        while (head != None):
+            new_head = ListNode(head.val, rev)
+            rev = new_head
+            head = head.next
+        return rev
